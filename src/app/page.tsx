@@ -19,21 +19,23 @@ const Home = () => {
               <span className="text-accent">João Pedro</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Tenho excelência em desenvolver interfaces digitais elegantes e
-              sou proficiente em diversas linguagens de programação e
-              tecnologias de front-end.
+              Tenho experiência em desenvolver aplicações web modernas e
+              funcionais, e também sou proficiente em diversas tecnologias
+              relacionadas ao front-end.
             </p>
 
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Baixar CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a download="cv_devjpedro" href="/assets/cv.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Baixar CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
