@@ -17,7 +17,7 @@ const stats = [
   },
   {
     num: 350,
-    text: 'Commits de código',
+    text: 'Commits no GitHub',
   },
 ]
 
