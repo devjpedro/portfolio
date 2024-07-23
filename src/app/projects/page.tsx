@@ -170,16 +170,16 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%] rounded-md">
+          <div className="w-full xl:w-[50%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] mb-12 rounded-md"
+              className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 ">
+                  <div className="h-[460px] relative group flex justify-center items-center">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 size-full bg-black/10 z-10"></div>
                     {/* image */}
@@ -188,7 +188,7 @@ const Projects = () => {
                         src={project.image}
                         alt=""
                         fill
-                        className="object-cover"
+                        className="object-cover rounded-md"
                       />
                     </div>
                   </div>
