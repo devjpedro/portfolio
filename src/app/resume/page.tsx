@@ -295,7 +295,7 @@ const Resume = () => {
                   {about.info.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-center justify-center xl:justify-start gap-4"
+                      className="flex items-center justify-center xl:justify-start gap-4 flex-wrap sm:flex-nowrap"
                     >
                       <span className="text-white/60">{item.fieldName}</span>
                       <span className="text-lg">{item.fieldValue}</span>
