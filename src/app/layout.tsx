@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { JetBrains_Mono } from 'next/font/google'
+import { Toaster } from 'sonner'
 import './globals.css'
 
 // components
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={jetbrainsMono.variable}>
+        <Toaster />
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

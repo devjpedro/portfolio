@@ -10,10 +10,14 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import { mask } from 'remask'
+import { toast } from 'sonner'
 import * as z from 'zod'
 
 const info = [
@@ -57,7 +61,20 @@ const FormSchema = z.object({
 
 type FormSchemaType = z.infer<typeof FormSchema>
 
+/* send email function */
+const sendEmail = async (templateParams: Record<string, unknown>) => {
+  return emailjs.send(
+    'service_4erzeve',
+    'template_fg6jzwb',
+    templateParams,
+    'lmFPVSLhPE47A_FRD',
+  )
+}
+
 const Contact = () => {
+  // states
+  const [isLoadingBtn, setIsLoadingBtn] = useState(false)
+
   // hooks
   const form = useForm<FormSchemaType>({
     resolver: zodResolver(FormSchema),
@@ -71,8 +88,32 @@ const Contact = () => {
   })
 
   // funcs
-  const onSubmitFormContact = (data: FormSchemaType) => {
-    console.log(data)
+  const onSubmitFormContact = async ({
+    email,
+    lastname,
+    message,
+    name,
+    phone,
+  }: FormSchemaType) => {
+    setIsLoadingBtn(true)
+
+    const templateParams = {
+      email,
+      lastname,
+      message,
+      name,
+      phone,
+    }
+
+    toast.promise(sendEmail(templateParams), {
+      loading: 'Enviando email...',
+      success: () => {
+        form.reset()
+        return 'Email enviado com sucesso!'
+      },
+      error: 'Erro ao enviar email. Por favor tente novamente.',
+      finally: () => setIsLoadingBtn(false),
+    })
   }
 
   return (
@@ -149,7 +190,16 @@ const Contact = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input type="tel" placeholder="Celular" {...field} />
+                          <Input
+                            type="tel"
+                            placeholder="Celular"
+                            {...field}
+                            onChange={(e) =>
+                              field.onChange(
+                                mask(e.target.value, '(99) 99999-9999'),
+                              )
+                            }
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -175,7 +225,12 @@ const Contact = () => {
                 />
 
                 {/* button */}
-                <Button type="submit" size="md" className="self-start">
+                <Button
+                  type="submit"
+                  size="md"
+                  className="self-start disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-accent"
+                  disabled={isLoadingBtn}
+                >
                   Enviar mensagem
                 </Button>
               </form>
