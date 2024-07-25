@@ -29,6 +29,9 @@ const config = {
         accent: {
           DEFAULT: '#8b5cf6',
           hover: '#7c3aed',
+          100: '#efe9fe',
+          200: '#e2d6fe',
+          300: '#cbb5fd',
         },
       },
       keyframes: {
