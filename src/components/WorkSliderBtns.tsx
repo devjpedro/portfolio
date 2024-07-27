@@ -17,10 +17,18 @@ const WorkSliderBtns = ({
 
   return (
     <div className={containerStyles}>
-      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
+      <button
+        className={btnStyles}
+        onClick={() => swiper.slidePrev()}
+        aria-label="Anterior"
+      >
         <PiCaretLeftBold />
       </button>
-      <button className={btnStyles} onClick={() => swiper.slideNext()}>
+      <button
+        className={btnStyles}
+        onClick={() => swiper.slideNext()}
+        aria-label="Próximo"
+      >
         <PiCaretRightBold />
       </button>
     </div>

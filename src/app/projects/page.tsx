@@ -144,7 +144,10 @@ const Projects = () => {
                 <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="size-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger
+                        aria-label="Deploy do projeto"
+                        className="size-[70px] rounded-full bg-white/5 flex justify-center items-center group"
+                      >
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -158,7 +161,10 @@ const Projects = () => {
                 <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="size-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger
+                        aria-label="Repositório no GitHub"
+                        className="size-[70px] rounded-full bg-white/5 flex justify-center items-center group"
+                      >
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -189,6 +195,8 @@ const Projects = () => {
                         alt=""
                         fill
                         className="object-cover rounded-md"
+                        priority
+                        quality={80}
                       />
                     </div>
                   </div>
