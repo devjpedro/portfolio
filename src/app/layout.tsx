@@ -15,8 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfólio',
-  description: 'Meu portfólio',
+  title: 'Portfólio | devjpedro',
+  description:
+    'Olá, sou João Pedro, um desenvolvedor de software com experiência em criar aplicações web modernas e funcionais. Proficiente em diversas tecnologias de front-end.',
+  icons: {
+    icon: '/assets/favicon.ico',
+  },
 }
 
 export default function RootLayout({
