@@ -2,11 +2,11 @@
 
 import { Button } from '@/components/ui/button'
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -122,7 +122,7 @@ const Contact = () => {
       animate={{
         opacity: 1,
         transition: {
-          delay: 2.4,
+          delay: 0.5,
           duration: 0.4,
           ease: 'easeIn',
         },

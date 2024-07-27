@@ -11,7 +11,7 @@ const Photo = () => {
         animate={{
           opacity: 1,
           transition: {
-            delay: 2,
+            delay: 0.5,
             duration: 0.4,
             ease: 'easeIn',
           },
@@ -23,7 +23,7 @@ const Photo = () => {
           animate={{
             opacity: 1,
             transition: {
-              delay: 2.4,
+              delay: 0.5,
               duration: 0.4,
               ease: 'easeInOut',
             },
@@ -33,7 +33,7 @@ const Photo = () => {
           <Image
             src="/assets/photo.png"
             alt=""
-            quality={100}
+            quality={80}
             priority
             fill
             className="object-contain overflow-hidden"
