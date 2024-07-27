@@ -46,7 +46,7 @@ const Services = () => {
             transition: {
               delay: 0.5,
               duration: 0.4,
-              ease: 'easeIn',
+              ease: 'easeInOut',
             },
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"

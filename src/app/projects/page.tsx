@@ -107,7 +107,7 @@ const Projects = () => {
         transition: {
           delay: 0.5,
           duration: 0.4,
-          ease: 'easeIn',
+          ease: 'easeInOut',
         },
       }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
