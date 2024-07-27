@@ -17,7 +17,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
               ease: 'easeInOut',
             },
           }}
-          className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
+          className="h-screen w-screen fixed bg-light-primary dark:bg-dark-primary top-0 pointer-events-none"
         />
         {children}
       </div>

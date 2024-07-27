@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { CiMenuFries } from 'react-icons/ci'
+import { MobileModeToggle } from './MobileModeToggle'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 
 const links = [
@@ -53,7 +54,9 @@ const MobileNav = () => {
           </Link>
         </div>
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8 -mt-4">
+          <MobileModeToggle />
+
           {links.map((link, index) => (
             <Link
               key={index}

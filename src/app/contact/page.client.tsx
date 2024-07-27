@@ -135,11 +135,11 @@ const ContactClient = () => {
             {/* form */}
             <div className="xl:h-[54%] order-1 xl:order-none">
               <form
-                className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+                className="flex flex-col gap-6 p-10 bg-light-secondary dark:bg-dark-secondary rounded-xl"
                 onSubmit={form.handleSubmit(onSubmitFormContact)}
               >
                 <h3 className="text-4xl text-accent">Vamos trabalhar juntos</h3>
-                <p className="text-white/60 leading-6">
+                <p className="text-dark-primary/60 dark:text-light-primary/60 leading-6">
                   Se você está procurando um desenvolvedor dedicado, você está
                   no lugar certo. Estou sempre em busca de novos desafios e
                   oportunidades para colaborar em projetos inovadores. <br />{' '}
@@ -240,11 +240,11 @@ const ContactClient = () => {
               <ul className="flex flex-col gap-10">
                 {info.map((item, index) => (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="size-[52px] xl:size-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                    <div className="size-[52px] xl:size-[72px] bg-light-secondary dark:bg-dark-secondary text-accent rounded-md flex items-center justify-center">
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs sm:text-base text-white/60">
+                      <p className="text-xs sm:text-base text-dark-primary/60 dark:text-light-primary/60">
                         {item.title}
                       </p>
                       <h3 className="text-sm sm:text-lg">{item.description}</h3>

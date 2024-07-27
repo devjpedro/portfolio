@@ -28,7 +28,7 @@ const Photo = () => {
               ease: 'easeInOut',
             },
           }}
-          className="size-[298px] xl:size-[498px] mix-blend-lighten absolute"
+          className="size-[298px] xl:size-[498px] mix-blend-darken dark:mix-blend-lighten absolute"
         >
           <Image
             src="/assets/photo.png"
@@ -42,7 +42,7 @@ const Photo = () => {
 
         {/* circle */}
         <motion.svg
-          className="size-[300px] xl:size-[506px] mix-blend-lighten"
+          className="size-[300px] xl:size-[506px] mix-blend-darken dark:mix-blend-lighten"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="https://www.w3.org/2000/svg"

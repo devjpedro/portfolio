@@ -2,12 +2,13 @@ import Link from 'next/link'
 
 // components
 import MobileNav from './MobileNav'
+import { ModeToggle } from './ModeToggle'
 import Nav from './Nav'
 import { Button } from './ui/button'
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 xl:py-12 ">
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/" className="z-10">
@@ -22,6 +23,7 @@ const Header = () => {
           <Link href="/contact">
             <Button>Fale comigo</Button>
           </Link>
+          <ModeToggle />
         </div>
 
         {/* mobile nav */}

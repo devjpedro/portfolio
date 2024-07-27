@@ -20,7 +20,7 @@ const Home = () => {
                 Olá, sou <br />
                 <span className="text-accent">João Pedro</span>
               </h1>
-              <p className="max-w-[500px] mb-9 text-white/80">
+              <p className="max-w-[500px] mb-9 text-dark-secondary/80 dark:text-light-secondary/60">
                 Tenho experiência em desenvolver aplicações web modernas e
                 funcionais, e também sou proficiente em diversas tecnologias
                 relacionadas ao front-end.
@@ -35,13 +35,13 @@ const Home = () => {
                     className="uppercase flex items-center gap-2"
                   >
                     <span>Baixar CV</span>
-                    <FiDownload className="text-xl" />
+                    <FiDownload className="text-xl " />
                   </Button>
                 </a>
                 <div className="mb-8 xl:mb-0">
                   <Social
                     containerStyles="flex gap-6"
-                    iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                    iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-light-primary hover:dark:text-dark-primary hover:transition-all duration-500"
                   />
                 </div>
               </div>

@@ -7,6 +7,7 @@ import './globals.css'
 // components
 import Header from '@/components/Header'
 import PageTransition from '@/components/PageTransition'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -30,10 +31,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={jetbrainsMono.variable}>
-        <Toaster />
-        <Header />
-        <PageTransition>{children}</PageTransition>
+      <body
+        className={`${jetbrainsMono.variable} bg-light-primary dark:bg-dark-primary text-dark-primary dark:text-light-primary *:selection:text-light-primary *:selection:dark:text-dark-primary`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster />
+          <Header />
+          <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -13,7 +13,10 @@ const TabsList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
-    className={cn('inline-flex h-auto rounded-md p-1 text-primary', className)}
+    className={cn(
+      'inline-flex h-auto rounded-md p-1 text-dark-primary dark:text-light-primary',
+      className,
+    )}
     {...props}
   />
 ))
@@ -26,7 +29,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      'inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-white rounded-lg p-3 text-base font-medium ring-offset-white transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold data-[state=active]:shadow-sm',
+      'inline-flex items-center w-full bg-light-secondary dark:bg-dark-secondary justify-center whitespace-nowrap text-dark-primary dark:text-light-primary rounded-lg p-3 text-base font-medium ring-offset-white transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-accent dark:data-[state=active]:bg-accent data-[state=active]:text-light-primary dark:data-[state=active]:text-dark-primary data-[state=active]:font-bold data-[state=active]:shadow-sm',
       className,
     )}
     {...props}
@@ -50,3 +53,5 @@ const TabsContent = React.forwardRef<
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
 export { Tabs, TabsContent, TabsList, TabsTrigger }
+// eslint-disable-next-line prettier/prettier
+

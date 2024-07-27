@@ -25,6 +25,14 @@ const config = {
     },
     extend: {
       colors: {
+        dark: {
+          primary: '#1c1c22',
+          secondary: '#27272c',
+        },
+        light: {
+          primary: '#f8fafc',
+          secondary: '#e2e8f0',
+        },
         primary: '#1c1c22',
         accent: {
           DEFAULT: '#8b5cf6',
