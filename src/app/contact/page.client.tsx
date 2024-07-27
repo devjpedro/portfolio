@@ -131,15 +131,15 @@ const ContactClient = () => {
     >
       <Form {...form}>
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row gap-[30px]">
+          <div className="flex flex-col gap-[30px] xl:flex-row">
             {/* form */}
-            <div className="xl:h-[54%] order-1 xl:order-none">
+            <div className="order-1 xl:order-none xl:h-[54%]">
               <form
-                className="flex flex-col gap-6 p-10 bg-light-secondary dark:bg-dark-secondary rounded-xl"
+                className="flex flex-col gap-6 rounded-xl bg-light-secondary p-10 dark:bg-dark-secondary"
                 onSubmit={form.handleSubmit(onSubmitFormContact)}
               >
                 <h3 className="text-4xl text-accent">Vamos trabalhar juntos</h3>
-                <p className="text-dark-primary/60 dark:text-light-primary/60 leading-6">
+                <p className="leading-6 text-dark-primary/60 dark:text-light-primary/60">
                   Se você está procurando um desenvolvedor dedicado, você está
                   no lugar certo. Estou sempre em busca de novos desafios e
                   oportunidades para colaborar em projetos inovadores. <br />{' '}
@@ -147,7 +147,7 @@ const ContactClient = () => {
                   com você o mais breve possível.
                 </p>
                 {/* input */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="name"
@@ -236,15 +236,15 @@ const ContactClient = () => {
               </form>
             </div>
             {/* info */}
-            <div className="flex-1 flex items-center xl:justify-end order-2 xl:order-none mb-8 xl:mb-0">
+            <div className="order-2 mb-8 flex flex-1 items-center xl:order-none xl:mb-0 xl:justify-end">
               <ul className="flex flex-col gap-10">
                 {info.map((item, index) => (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="size-[52px] xl:size-[72px] bg-light-secondary dark:bg-dark-secondary text-accent rounded-md flex items-center justify-center">
+                    <div className="flex size-[52px] items-center justify-center rounded-md bg-light-secondary text-accent dark:bg-dark-secondary xl:size-[72px]">
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs sm:text-base text-dark-primary/60 dark:text-light-primary/60">
+                      <p className="text-xs text-dark-primary/60 dark:text-light-primary/60 sm:text-base">
                         {item.title}
                       </p>
                       <h3 className="text-sm sm:text-lg">{item.description}</h3>

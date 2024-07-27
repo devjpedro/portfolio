@@ -10,18 +10,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-accent text-light-primary dark:text-dark-primary hover:bg-accent-hover',
-        primary: 'bg-light-primary dark:bg-dark-primary text-dark-primary dark:text-light-primary',
+        default: 'bg-accent text-light-primary hover:bg-accent-hover dark:text-dark-primary',
+        primary: 'bg-light-primary text-dark-primary dark:bg-dark-primary dark:text-light-primary',
         outline:
           'border border-accent bg-transparent text-accent hover:bg-accent hover:text-light-primary hover:dark:text-dark-primary',
         circle: 
-        "border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-light-primary hover:dark:text-dark-primary"
+        "flex items-center justify-center rounded-full border border-accent text-base text-accent hover:bg-accent hover:text-light-primary hover:dark:text-dark-primary"
       },
       size: {
         default: 'h-[44px] px-6',
         md: 'h-[48px] px-6',
         lg: 'h-[56px] px-8 text-sm uppercase tracking-[2px]',
-        circle: "w-9 h-9"
+        circle: "size-9"
       },
     },
     defaultVariants: {

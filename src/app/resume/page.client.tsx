@@ -175,14 +175,14 @@ const ResumeClient = () => {
           ease: 'easeInOut',
         },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="flex min-h-[80vh] items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col gap-[60px] xl:flex-row"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-6 xl:mx-0">
             <TabsTrigger value="experience">Experiência</TabsTrigger>
             <TabsTrigger value="education">Educação</TabsTrigger>
             <TabsTrigger value="skills">Habilidades</TabsTrigger>
@@ -195,18 +195,18 @@ const ResumeClient = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-dark-primary/60 dark:text-light-primary/60 mx-auto xl:mx-0 leading-6">
+                <p className="mx-auto max-w-[600px] leading-6 text-dark-primary/60 dark:text-light-primary/60 xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-light-secondary dark:bg-dark-secondary h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-light-secondary px-10 py-6 dark:bg-dark-secondary lg:items-start"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
                           {item.position}
                         </h3>
                         <div className="flex items-center gap-3">
@@ -227,18 +227,18 @@ const ResumeClient = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-dark-primary/60 dark:text-light-primary/60 mx-auto xl:mx-0 leading-6">
+                <p className="mx-auto max-w-[600px] leading-6 text-dark-primary/60 dark:text-light-primary/60 xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-light-secondary dark:bg-dark-secondary py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="flex flex-col items-center justify-center gap-1 rounded-xl bg-light-secondary px-10 py-6 dark:bg-dark-secondary lg:items-start"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
                           {item.degree}
                         </h3>
                         <div className="flex items-center gap-3">
@@ -260,17 +260,17 @@ const ResumeClient = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-dark-primary/60 dark:text-light-primary/60 mx-auto xl:mx-0 leading-6">
+                  <p className="mx-auto max-w-[600px] leading-6 text-dark-primary/60 dark:text-light-primary/60 xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => (
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-light-secondary dark:bg-dark-secondary rounded-xl flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                          <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl bg-light-secondary dark:bg-dark-secondary">
+                            <div className="text-6xl transition-all duration-300 group-hover:text-accent">
                               {skill.icon}
                             </div>
                           </TooltipTrigger>
@@ -292,14 +292,14 @@ const ResumeClient = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-dark-primary/60 dark:text-light-primary/60 mx-auto xl:mx-0 leading-6">
+                <p className="mx-auto max-w-[600px] leading-6 text-dark-primary/60 dark:text-light-primary/60 xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-6 xl:mx-0 xl:grid-cols-2">
                   {about.info.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-center justify-center xl:justify-start gap-4 flex-wrap sm:flex-nowrap"
+                      className="flex flex-wrap items-center justify-center gap-4 sm:flex-nowrap xl:justify-start"
                     >
                       <span className="text-dark-primary/60 dark:text-light-primary/60">
                         {item.fieldName}

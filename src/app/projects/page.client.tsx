@@ -110,18 +110,18 @@ const ProjectsClient = () => {
           ease: 'easeInOut',
         },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
+      className="flex min-h-[80vh] flex-col justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+        <div className="flex flex-col gap-[30px] xl:flex-row">
+          <div className="flex w-full flex-col xl:h-[460px] xl:w-1/2 xl:justify-between">
+            <div className="flex h-1/2 flex-col gap-[30px]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline dark:text-outline-dark">
+              <div className="text-outline dark:text-outline-dark text-8xl font-extrabold leading-none text-transparent">
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-dark-primary dark:text-light-primary group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-[42px] font-bold capitalize leading-none text-dark-primary transition-all duration-500 group-hover:text-accent dark:text-light-primary">
                 {project.title}
               </h2>
               {/* project description */}
@@ -129,7 +129,7 @@ const ProjectsClient = () => {
                 {project.description}
               </p>
               {/* stack */}
-              <ul className="flex gap-4 flex-wrap">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-xl text-accent">
                     {item.name}
@@ -148,9 +148,9 @@ const ProjectsClient = () => {
                     <Tooltip>
                       <TooltipTrigger
                         aria-label="Deploy do projeto"
-                        className="size-[70px] rounded-full bg-zinc-200 dark:bg-white/5 flex justify-center items-center group"
+                        className="group flex size-[70px] items-center justify-center rounded-full bg-zinc-200 dark:bg-white/5"
                       >
-                        <BsArrowUpRight className="text-dark-primary dark:text-light-primary text-3xl group-hover:text-accent" />
+                        <BsArrowUpRight className="text-3xl text-dark-primary group-hover:text-accent dark:text-light-primary" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Deploy</p>
@@ -165,9 +165,9 @@ const ProjectsClient = () => {
                     <Tooltip>
                       <TooltipTrigger
                         aria-label="Repositório no GitHub"
-                        className="size-[70px] rounded-full bg-zinc-200 dark:bg-white/5 flex justify-center items-center group"
+                        className="group flex size-[70px] items-center justify-center rounded-full bg-zinc-200 dark:bg-white/5"
                       >
-                        <BsGithub className="text-dark-primary dark:text-light-primary text-3xl group-hover:text-accent" />
+                        <BsGithub className="text-3xl text-dark-primary group-hover:text-accent dark:text-light-primary" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Repositório</p>
@@ -178,25 +178,25 @@ const ProjectsClient = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-1/2">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] mb-12"
+              className="mb-12 xl:h-[520px]"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center">
+                  <div className="group relative flex h-[460px] items-center justify-center">
                     {/* overlay */}
-                    <div className="absolute top-0 bottom-0 size-full bg-black/10 z-10"></div>
+                    <div className="absolute inset-y-0 z-10 size-full bg-black/10"></div>
                     {/* image */}
                     <div className="relative size-full">
                       <Image
                         src={project.image}
                         alt=""
                         fill
-                        className="object-cover rounded-md"
+                        className="rounded-md object-cover"
                         priority
                         quality={80}
                       />

@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="relative size-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -28,7 +28,7 @@ const Photo = () => {
               ease: 'easeInOut',
             },
           }}
-          className="size-[298px] xl:size-[498px] mix-blend-darken dark:mix-blend-lighten absolute"
+          className="absolute size-[298px] mix-blend-darken dark:mix-blend-lighten xl:size-[498px]"
         >
           <Image
             src="/assets/photo.png"
@@ -36,13 +36,13 @@ const Photo = () => {
             quality={80}
             priority
             fill
-            className="object-contain overflow-hidden"
+            className="overflow-hidden object-contain"
           />
         </motion.div>
 
         {/* circle */}
         <motion.svg
-          className="size-[300px] xl:size-[506px] mix-blend-darken dark:mix-blend-lighten"
+          className="size-[300px] mix-blend-darken dark:mix-blend-lighten xl:size-[506px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="https://www.w3.org/2000/svg"

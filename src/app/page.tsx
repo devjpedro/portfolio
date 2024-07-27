@@ -12,27 +12,27 @@ const Home = () => {
     <PageTransition>
       <section className="h-full">
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+          <div className="flex flex-col items-center justify-between xl:flex-row xl:pb-24 xl:pt-8">
             {/* text */}
-            <div className="text-center xl:text-left order-2 xl:order-none">
+            <div className="order-2 text-center xl:order-none xl:text-left">
               <span className="text-xl">Software Developer</span>
               <h1 className="h1 mb-6">
                 Olá, sou <br />
                 <span className="text-accent">João Pedro</span>
               </h1>
-              <p className="max-w-[500px] mb-9 text-dark-secondary/80 dark:text-light-secondary/60">
+              <p className="mb-9 max-w-[500px] text-dark-secondary/80 dark:text-light-secondary/60">
                 Tenho experiência em desenvolver aplicações web modernas e
                 funcionais, e também sou proficiente em diversas tecnologias
                 relacionadas ao front-end.
               </p>
 
               {/* btn and socials */}
-              <div className="flex flex-col xl:flex-row items-center gap-8">
+              <div className="flex flex-col items-center gap-8 xl:flex-row">
                 <a download="cv_devjpedro" href="/assets/cv.pdf">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="uppercase flex items-center gap-2"
+                    className="flex items-center gap-2 uppercase"
                   >
                     <span>Baixar CV</span>
                     <FiDownload className="text-xl " />
@@ -48,7 +48,7 @@ const Home = () => {
             </div>
 
             {/* photo */}
-            <div className="order-1 xl:order-none mb-8 xl:mb-0">
+            <div className="order-1 mb-8 xl:order-none xl:mb-0">
               <Photo />
             </div>
           </div>

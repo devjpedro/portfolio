@@ -32,7 +32,7 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  'fixed z-50 gap-4 bg-light-primary dark:bg-dark-primary p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 dark:bg-dark-primary',
+  'fixed z-50 gap-4 bg-light-primary p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out dark:bg-dark-primary',
   {
     variants: {
       side: {
@@ -66,7 +66,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-8 top-8 transition-opacity outline-none">
+      <SheetPrimitive.Close className="absolute right-8 top-8 outline-none transition-opacity">
         <IoMdClose className="text-3xl text-accent" />
         <span className="sr-only">Fechar</span>
       </SheetPrimitive.Close>

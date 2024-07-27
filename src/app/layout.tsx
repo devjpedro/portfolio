@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${jetbrainsMono.variable} bg-light-primary dark:bg-dark-primary text-dark-primary dark:text-light-primary *:selection:text-light-primary *:selection:dark:text-dark-primary`}
+        className={`${jetbrainsMono.variable} bg-light-primary text-dark-primary *:selection:text-light-primary dark:bg-dark-primary dark:text-light-primary *:selection:dark:text-dark-primary`}
       >
         <ThemeProvider
           attribute="class"

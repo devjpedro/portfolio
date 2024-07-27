@@ -38,7 +38,7 @@ const MobileNav = () => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
-        className="flex justify-center items-center"
+        className="flex items-center justify-center"
         aria-label="Abrir menu"
       >
         <CiMenuFries className="text-[32px] text-accent" />
@@ -46,7 +46,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col ">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mb-40 mt-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               devjpedro<span className="text-accent">.</span>
@@ -54,14 +54,14 @@ const MobileNav = () => {
           </Link>
         </div>
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8 -mt-4">
+        <nav className="-mt-4 flex flex-col items-center justify-center gap-8">
           <MobileModeToggle />
 
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.path}
-              className={`${link.path === pathname && 'text-accent border-b-2 border-accent'} text-xl capitalize hover:text-accent transition-all`}
+              className={`${link.path === pathname && 'border-b-2 border-accent text-accent'} text-xl capitalize transition-all hover:text-accent`}
               onClick={handleLinkClick}
             >
               {link.name}
