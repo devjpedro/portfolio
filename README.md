@@ -6,7 +6,7 @@ Bem vindo ao meu portfólio! Este é meu site pessoal, onde mostro meus projetos
 
 ## Tecnologias Usadas
 
-- Next.js: Um framework React para criar aplicações web modernas;
+- Next.js: Um framework React utilizado para criar aplicações web modernas;
 - Tailwind CSS: Uma biblioteca CSS para estilização rápida e eficiente;
 - TypeScript: Um superconjunto de JavaScript que adiciona tipagem estática.
 
@@ -14,6 +14,7 @@ Bem vindo ao meu portfólio! Este é meu site pessoal, onde mostro meus projetos
 
 - Tema Escuro/Claro: Implementação de temas escuro e claro com fácil alternância;
 - Design Responsivo: Layout adaptável a diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops.
+
 ## Deploy
 
 Para visualizar meu site pessoal, acesse este link 
