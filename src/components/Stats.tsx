@@ -16,7 +16,7 @@ const stats = [
     text: 'Tecnologias dominadas',
   },
   {
-    num: 350,
+    num: 250,
     text: 'Commits no GitHub',
   },
 ]

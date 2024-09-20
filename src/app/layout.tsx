@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // components
 import Header from '@/components/Header'
@@ -42,6 +43,7 @@ export default function RootLayout({
         >
           <Toaster />
           <Header />
+          <SpeedInsights />
           <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
