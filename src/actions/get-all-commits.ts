@@ -25,15 +25,18 @@ interface CommitResponse {
 }
 
 async function fetchRepos(): Promise<Repo[]> {
-  const response = await fetch(`${process.env.GITHUB_API_BASE}/user/repos`, {
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      Accept: 'application/vnd.github.v3+json',
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_GITHUB_API_BASE}/user/repos`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github.v3+json',
+      },
+      next: {
+        revalidate: 60 * 60 * 24,
+      },
     },
-    next: {
-      revalidate: 60 * 60 * 24,
-    },
-  })
+  )
 
   if (!response.ok) {
     throw new Error('Erro ao buscar repositórios do usuário.')
@@ -47,10 +50,10 @@ async function fetchCommits(
   page: number = 1,
 ): Promise<Commit[]> {
   const response = await fetch(
-    `${process.env.GITHUB_API_BASE}/repos/devjpedro/${repoName}/commits?per_page=100&page=${page}`,
+    `${process.env.NEXT_PUBLIC_GITHUB_API_BASE}/repos/devjpedro/${repoName}/commits?per_page=100&page=${page}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
         Accept: 'application/vnd.github.v3+json',
       },
       next: {
