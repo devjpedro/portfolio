@@ -13,7 +13,8 @@ Bem vindo ao meu portfólio! Este é meu site pessoal, onde mostro meus projetos
 ## Funcionalidades
 
 - Tema Escuro/Claro: Implementação de temas escuro e claro com fácil alternância;
-- Design Responsivo: Layout adaptável a diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops.
+- Design Responsivo: Layout adaptável a diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops;
+- Busca na API do GitHub para retornar a quantidade total de commits.
 
 ## Deploy
 
