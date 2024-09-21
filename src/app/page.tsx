@@ -6,8 +6,11 @@ import PageTransition from '@/components/PageTransition'
 import Photo from '@/components/Photo'
 import Social from '@/components/Social'
 import Stats from '@/components/Stats'
+import getAllCommits from '@/actions/get-all-commits'
 
-const Home = () => {
+const Home = async () => {
+  const commitsNumber = await getAllCommits()
+
   return (
     <PageTransition>
       <section className="h-full">
@@ -53,7 +56,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Stats />
+        <Stats githubCommits={commitsNumber} />
       </section>
     </PageTransition>
   )

@@ -4,24 +4,28 @@ import CountUp from 'react-countup'
 
 const stats = [
   {
+    id: 1,
     num: 1,
     text: 'Ano de Experiência',
   },
   {
+    id: 2,
     num: 2,
     text: 'Projetos entregues',
   },
   {
+    id: 3,
     num: 7,
     text: 'Tecnologias dominadas',
   },
   {
-    num: 250,
+    id: 4,
+    num: 0,
     text: 'Commits no GitHub',
   },
 ]
 
-const Stats = () => {
+const Stats = ({ githubCommits }: { githubCommits: number }) => {
   return (
     <section className="pb-12 pt-4 xl:py-0">
       <div className="container mx-auto">
@@ -32,7 +36,7 @@ const Stats = () => {
               className="flex flex-1 items-center justify-center gap-4 xl:justify-start"
             >
               <CountUp
-                end={item.num}
+                end={item.id === 4 ? githubCommits : item.num}
                 duration={5}
                 delay={1}
                 className="text-4xl font-extrabold xl:text-6xl"
