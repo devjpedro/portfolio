@@ -190,7 +190,7 @@ const ResumeClient = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full xl:pb-8">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">

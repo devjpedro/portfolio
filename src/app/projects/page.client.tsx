@@ -19,6 +19,27 @@ const projects = [
   {
     num: '01',
     category: 'frontend',
+    title: 'Dogs',
+    description:
+      'Dogs é uma rede social dedicada exclusivamente aos apaixonados por cães. O objetivo é oferecer uma experiência simples e visualmente atraente, onde os usuários podem explorar e compartilhar fotos de diferentes pets, conectando-se com outros amantes de cachorros.',
+    stack: [
+      {
+        name: 'Next',
+      },
+      {
+        name: 'TypeScript',
+      },
+      {
+        name: 'Styled-Components',
+      },
+    ],
+    image: '/assets/work/dogs.webp',
+    live: 'https://dogs-jp.vercel.app',
+    github: 'https://github.com/devjpedro/dogs-next',
+  },
+  {
+    num: '02',
+    category: 'frontend',
     title: 'Coffee Delivery',
     description:
       'O Coffee Delivery se trata de uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia.',
@@ -33,12 +54,12 @@ const projects = [
         name: 'TypeScript',
       },
     ],
-    image: '/assets/work/coffeedelivery.png',
+    image: '/assets/work/coffeedelivery.webp',
     live: 'https://coffeedeliveryjp.netlify.app/',
     github: 'https://github.com/devjpedro/coffee-delivery',
   },
   {
-    num: '02',
+    num: '03',
     category: 'frontend',
     title: 'React Stock',
     description:
@@ -60,12 +81,12 @@ const projects = [
         name: 'MUI',
       },
     ],
-    image: '/assets/work/reactstock.png',
+    image: '/assets/work/reactstock.webp',
     live: 'https://reactstockjp.netlify.app/',
     github: 'https://github.com/devjpedro/react-stock',
   },
   {
-    num: '03',
+    num: '04',
     category: 'frontend',
     title: 'Ignite Todo',
     description:
@@ -81,7 +102,7 @@ const projects = [
         name: 'TypeScript',
       },
     ],
-    image: '/assets/work/todo.png',
+    image: '/assets/work/todo.webp',
     live: 'https://ignitetodojp.netlify.app/',
     github: 'https://github.com/devjpedro/todo',
   },
